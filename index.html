@@ -1,311 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAFAL GROUP TUITION - Bhavnagar's Best Educational Institute</title>
-    <style>
-        /* General Styles & Reset */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff; /* Primary Link Color */
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safal Group Tuition — Bhavnagar</title>
 
-        /* Header & Hero Section */
-        .header {
-            background-color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .logo-img {
-            max-width: 150px;
-            height: auto;
-            margin-bottom: 15px;
-        }
-        .institute-name {
-            font-size: 2.5em;
-            color: #0d47a1; /* Dark Blue */
-            margin: 0 0 5px 0;
-        }
-        .tagline {
-            font-size: 1.2em;
-            color: #333;
-            font-weight: 500;
-            margin: 0 0 15px 0;
-        }
-        .badge {
-            display: inline-block;
-            background-color: #ffc107; /* Yellow/Gold */
-            color: #333;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 0.9em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+  <!-- Modern clean font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        /* Buttons & Call to Action */
-        .cta-button {
-            display: inline-block;
-            background-color: #007bff; /* Blue */
-            color: #fff;
-            padding: 12px 30px;
-            margin-top: 20px;
-            border-radius: 5px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-            text-decoration: none;
-        }
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        .social-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 1.5em;
-            transition: transform 0.2s;
-        }
-        .social-button:hover {
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-        .whatsapp-btn { background-color: #25d366; }
-        .instagram-btn { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-        .phone-btn { background-color: #28a745; }
-        .icon {
-            /* Simple placeholder for icons */
-            font-style: normal;
-        }
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e3a8a;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
+      --bg: #f1f5f9;
+      --white: #ffffff;
+    }
 
-        /* Features Section */
-        .section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .section-title {
-            font-size: 2em;
-            color: #0d47a1;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #ffc107;
-            margin: 10px auto 0;
-        }
-        .features-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .feature-item {
-            background-color: #fff;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 30px;
-            width: 100%; /* Mobile First */
-            max-width: 350px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        .feature-icon {
-            font-size: 2.5em;
-            color: #007bff;
-            margin-bottom: 15px;
-            display: block;
-        }
-        .feature-item h3 {
-            margin-top: 0;
-            color: #0d47a1;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* Map Section */
-        .map-section {
-            background-color: #e9ecef;
-        }
-        .map-container {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 20px;
-            height: 400px;
-        }
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+    }
 
-        /* Footer */
-        .footer {
-            background-color: #0d47a1; /* Dark Blue */
-            color: #fff;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        .footer a {
-            color: #ffc107;
-        }
+    .hero-section {
+      width: 100%;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      text-align: center;
+    }
 
-        /* Responsive Adjustments */
-        @media (min-width: 768px) {
-            .features-grid {
-                justify-content: space-between;
-            }
-            .feature-item {
-                width: calc(33% - 20px);
-                margin-bottom: 0;
-            }
-            .institute-name {
-                font-size: 3em;
-            }
-            .tagline {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+    .hero-section h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-section p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .info-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      margin-top: -40px;
+      text-align: center;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .info-item span { color: var(--primary-dark); font-weight: 600; }
+
+    .buttons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    .map-box {
+      margin-top: 40px;
+      width: 100%;
+      height: 300px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="header">
-        <div class="container">
-            <img src="WhatsApp Image 2025-11-20 at 12.52.33 PM.jpeg" alt="SAFAL GROUP TUITION Logo" class="logo-img">
-            
-            <h1 class="institute-name">SAFAL GROUP TUITION</h1>
-            
-            <p class="tagline">
-                **Bhavnagar's The Most Trusted & Top Rated Educational Institute**
-            </p>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>SAFAL GROUP TUITION</h1>
+    <p>Bhavnagar's The Most Trusted & Top Rated Educational Institute</p>
+  </div>
 
-            <div class="badge">
-                **Best Institute — Last Year (Bhavnagar)**
-            </div>
+  <!-- Info Section -->
+  <div class="container">
+    <div class="info-card">
+      <h2>Contact & Details</h2>
 
-            <a href="tel:+919157121224" class="cta-button">
-                📞 Call Now: 9157121224
-            </a>
-        </div>
+      <div class="info-list">
+        <div class="info-item">📞 Contact: <span>9157121224</span></div>
+        <div class="info-item">📸 Instagram: <a href="https://www.instagram.com/safal_group_tuition/?hl=en" target="_blank">@safal_group_tuition</a></div>
+        <div class="info-item">📍 Address: <span>155, Bharat Nagar Rd, Shikshak Society, Bhavnagar</span></div>
+      </div>
+
+      <div class="buttons">
+        <a href="tel:+919157121224" class="btn btn-primary">📞 Call Now</a>
+        <a href="https://www.instagram.com/safal_group_tuition/?hl=en" class="btn btn-outline" target="_blank">Instagram</a>
+        <a href="https://www.google.com/maps?q=155,+Bharat+Nagar+Rd,+Bhavnagar" class="btn btn-outline" target="_blank">Google Maps</a>
+      </div>
     </div>
+  </div>
 
-    <div class="section">
-        <div class="container">
-            <h2 class="section-title">Why Choose SAFAL?</h2>
-            <div class="features-grid">
-                
-                <div class="feature-item">
-                    <span class="feature-icon" role="img" aria-label="Book">📚</span>
-                    <h3>Small Batches</h3>
-                    <p>Personalized attention and doubt solving in focused, small-sized groups.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <span class="feature-icon" role="img" aria-label="Person">🧑‍🏫</span>
-                    <h3>Experienced Faculty</h3>
-                    <p>Learn from Bhavnagar's top educators with proven track records.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <span class="feature-icon" role="img" aria-label="Clipboard">📝</span>
-                    <h3>Weekly Tests</h3>
-                    <p>Continuous assessment to monitor progress and build confidence for exams.</p>
-                </div>
+  <!-- Features Section -->
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:20px;">Why Choose Safal?</h2>
 
-            </div>
-        </div>
+    <div class="features">
+      <div class="feature-box">⭐ Small Batches for Personal Attention</div>
+      <div class="feature-box">👩‍🏫 Experienced & Dedicated Faculty</div>
+      <div class="feature-box">📚 Regular Tests & Progress Tracking</div>
+      <div class="feature-box">⏱️ Flexible Timings for All Students</div>
     </div>
+  </div>
 
-    <div class="section map-section">
-        <div class="container">
-            <h2 class="section-title">Our Location</h2>
-            <p>
-                **Address:** 155, Bharat Nagar Rd, Shikshak Society, Bharatnagar, Bhavnagar, Gujarat 364002
-            </p>
-
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.608380486791!2d72.00780217590216!3d21.7259160601955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f5108ccf8a42b%3A0x2a9b40090886c579!2sSafal%20Group%20Tuition!5e0!3m2!1sen!2sin!4v1700466311689!5m2!1sen!2sin" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Google Maps Location of SAFAL GROUP TUITION"
-                ></iframe>
-            </div>
-        </div>
+  <!-- Map Section -->
+  <div class="container">
+    <h2 style="text-align:center; margin-bottom:16px;">Find Us On Maps</h2>
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps?q=155,+Bharat+Nagar+Rd,+Bhavnagar&output=embed" 
+        width="100%" height="100%" style="border:0;">
+      </iframe>
     </div>
+  </div>
 
-    <div class="section" style="padding-top: 30px;">
-        <div class="container">
-            <h2 class="section-title" style="margin-bottom: 20px;">Get In Touch</h2>
-            <div class="social-buttons">
-                
-                <a href="https://wa.me/919157121224" target="_blank" class="social-button whatsapp-btn" title="Chat on WhatsApp">
-                    <span class="icon" role="img" aria-label="WhatsApp">💬</span>
-                </a>
+  <footer>
+    © <span id="year"></span> Safal Group Tuition — Bhavnagar's Leading Institute
+  </footer>
 
-                <a href="https://www.instagram.com/safal_group_tuition/?hl=en" target="_blank" class="social-button instagram-btn" title="Follow on Instagram">
-                    <span class="icon" role="img" aria-label="Instagram">📸</span>
-                </a>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-                <a href="tel:+919157121224" class="social-button phone-btn" title="Call Us Directly">
-                    <span class="icon" role="img" aria-label="Phone">📞</span>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <p>&copy; 2012 - <span id="currentYear">2025</span> SAFAL GROUP TUITION. All Rights Reserved.</p>
-            <p>
-                Quick Contact: 📞 
-                <a href="tel:+919157121224">9157121224</a> | 
-                <a href="https://www.instagram.com/safal_group_tuition/?hl=en" target="_blank">Instagram</a>
-            </p>
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
-
-    </body>
+</body>
 </html>
