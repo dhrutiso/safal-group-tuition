@@ -1,222 +1,262 @@
 <!-- Full Professional Multi-Section Animated Website for SAFAL GROUP TUITION -->
 <!-- Colors: Blue + White | Animated | Mobile Responsive | Modern UI -->
-<!-- Update contact details inside comments when needed -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Safal Group Tuition | Bhavnagar</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f7faff;
-    color: #0a1a44;
-  }
-  header {
-    background: linear-gradient(135deg, #1747c7, #1e59ff);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-  }
-  header img {
-    width: 140px;
-    border-radius: 10px;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  header h1 {
-    font-size: 42px;
-    margin-top: 15px;
-    animation: slideIn 1.5s ease;
-  }
-  header p {
-    font-size: 18px;
-    opacity: 0.9;
-    animation: fadeIn 2s;
-  }
-  @keyframes slideIn {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safal Group Tuition | Bhavnagar</title>
 
-  .nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 15px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #1747c7;
-  }
-  .nav a:hover {
-    color: #0d2a7a;
-  }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  .section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
-  h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  .about-box, .contact-box, .feature-grid {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f7faff;
+            color: #0a1a44;
+        }
 
-  .about-text {
-    font-size: 18px;
-    line-height: 1.7;
-    text-align: justify;
-  }
+        header {
+            background: linear-gradient(135deg, #1747c7, #1e59ff);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  .feature-item {
-    background: #e8efff;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-    font-weight: 600;
-    animation: fadeInUp 1.5s ease;
-  }
-  @keyframes fadeInUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
+        header img {
+            width: 140px;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
-  .animated-image {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 20px;
-    animation: float 3s infinite ease-in-out;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
+        header h1 {
+            font-size: 42px;
+            margin-top: 15px;
+            animation: slideIn 1.5s ease;
+        }
 
-  .contact-box a {
-    display: block;
-    margin: 10px 0;
-    padding: 12px;
-    text-align: center;
-    background: #1747c7;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 600;
-  }
-  .contact-box a:hover {
-    background: #0f2e8c;
-  }
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+            animation: fadeIn 2s;
+        }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: #dbe4ff;
-    font-size: 14px;
-    margin-top: 40px;
-  }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
 
-  /* --------------------------------------- */
-  /* ✅ MAKE NAV RESPONSIVE (ONLY NEW CODE)  */
-  /* --------------------------------------- */
-  @media (max-width: 600px) {
-    .nav {
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px;
-    }
-    .nav a {
-      flex: 1 1 45%;
-      text-align: center;
-      padding: 8px 0;
-      background: #f0f4ff;
-      border-radius: 8px;
-    }
-  }
-</style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ------------------- NAVIGATION (RESPONSIVE ADDED) ------------------- */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1747c7;
+        }
+
+        .nav a:hover {
+            color: #0d2a7a;
+        }
+
+        /* 🔥 Responsive Navigation Fix */
+        @media (max-width: 600px) {
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px;
+                text-align: center;
+            }
+            .nav a {
+                display: block;
+                font-size: 16px;
+            }
+        }
+
+        /* ------------------- SECTIONS ------------------- */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-box, .contact-box, .feature-grid {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #e8efff;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .animated-image {
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .contact-box a {
+            display: block;
+            margin: 10px 0;
+            padding: 12px;
+            text-align: center;
+            background: #1747c7;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            background: #0f2e8c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #dbe4ff;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+    </style>
 </head>
+
 <body>
 
 <header>
-  <img src="./public/WhatsApp Image 2025-12-04 at 10.11.47_31f6ffff.jpg" alt="Safal Logo" />
-  <h1>SAFAL GROUP TUITION</h1>
-  <p>Bhavnagar's The Most Trusted & Top Rated Educational Institute</p>
+    <img src="./public/WhatsApp Image 2025-12-04 at 10.11.47_31f6ffff.jpg" alt="Safal Logo" />
+    <h1>SAFAL GROUP TUITION</h1>
+    <p>Bhavnagar's The Most Trusted & Top Rated Educational Institute</p>
 </header>
 
 <div class="nav">
-  <a href="#about">About Us</a>
-  <a href="#features">Features</a>
-  <a href="#contact">Contact</a>
-  <a href="#location">Location</a>
-  <a href="#privacy">Privacy Policy</a>
+    <a href="#about">About Us</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+    <a href="#privacy">Privacy Policy</a>
 </div>
 
+<!-- ABOUT SECTION -->
 <section id="about" class="section">
-  <h2>About Us</h2>
-  <div class="about-box">
-    <p class="about-text">
-      Founded in 2012, <strong>Safal Group Tuition</strong> is Bhavnagar's most trusted and result-oriented educational institute...
-    </p>
-    <img class="animated-image" src="./public/WhatsApp Image 2025-12-04 at 10.19.09_ceea6b9b.jpg" />
-  </div>
+    <h2>About Us</h2>
+    <div class="about-box">
+        <p class="about-text">
+            Founded in 2012, <strong>Safal Group Tuition</strong> is Bhavnagar's most trusted and result-oriented educational institute. 
+            For the past decade, we have helped thousands of students build strong foundations, score excellent marks, and excel in their academic journey. 
+            <br><br>
+            Our teaching methods focus on clarity, personal attention, regular testing, and a stress-free environment where students can thrive. 
+            Safal Group Tuition’s mission is simple — to deliver quality education that transforms students into confident and successful achievers.
+        </p>
+
+        <img class="animated-image" src="./public/WhatsApp Image 2025-12-04 at 10.19.09_ceea6b9b.jpg" />
+    </div>
 </section>
 
+<!-- FEATURES -->
 <section id="features" class="section">
-  <h2>Why Choose Safal?</h2>
-  <div class="feature-grid">
-    <div class="feature-item">📘 Small Batches for Focused Learning</div>
-    <div class="feature-item">👩‍🏫 Highly Experienced Teachers</div>
-    <div class="feature-item">📝 Weekly Tests & Performance Tracking</div>
-    <div class="feature-item">🎯 Best Results in Bhavnagar</div>
-    <div class="feature-item">🏆 Trusted by 5000+ Students</div>
-    <div class="feature-item">⏱️ Flexible Timings</div>
-  </div>
+    <h2>Why Choose Safal?</h2>
+    <div class="feature-grid">
+        <div class="feature-item">📘 Small Batches for Focused Learning</div>
+        <div class="feature-item">👩‍🏫 Highly Experienced Teachers</div>
+        <div class="feature-item">📝 Weekly Tests & Performance Tracking</div>
+        <div class="feature-item">🎯 Best Results in Bhavnagar</div>
+        <div class="feature-item">🏆 Trusted by 5000+ Students</div>
+        <div class="feature-item">⏱️ Flexible Timings</div>
+    </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <div class="contact-box">
-    <a href="tel:9157121224">📞 Call: 9157121224</a>
-    <a href="https://www.instagram.com/safal_group_tuition/?hl=en" target="_blank">📸 Instagram</a>
-    <a href="mailto:info@safaltuition.com">📧 Email Us</a>
-  </div>
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <a href="tel:9157121224">📞 Call: 9157121224</a>
+        <a href="https://www.instagram.com/safal_group_tuition/?hl=en" target="_blank">📸 Instagram</a>
+        <a href="mailto:info@safaltuition.com">📧 Email Us</a>
+    </div>
 </section>
 
+<!-- LOCATION -->
 <section id="location" class="section">
-  <h2>Our Location</h2>
-  <p style="text-align:center; font-size:18px;">155, Bharat Nagar Rd, Shikshak Society, Bhavnagar, Gujarat</p>
-  <iframe style="width:100%; height:300px; border-radius:20px; border:0;" src="https://www.google.com/maps?q=155,+Bharat+Nagar+Rd,+Bhavnagar&output=embed"></iframe>
+    <h2>Our Location</h2>
+    <p style="text-align:center; font-size:18px;">
+        155, Bharat Nagar Rd, Shikshak Society, Bhavnagar, Gujarat
+    </p>
+    <iframe style="width:100%; height:300px; border-radius:20px; border:0;"
+            src="https://www.google.com/maps?q=155,+Bharat+Nagar+Rd,+Bhavnagar&output=embed">
+    </iframe>
 </section>
 
-<!-- PRIVACY POLICY SECTION --> <section id="privacy" class="section"> <h2>Privacy Policy</h2> <div class="about-box"> <p class="about-text"> At <strong>Safal Group Tuition</strong>, we value your privacy and are committed to protecting your personal information. We collect only the necessary details such as student information, contact numbers, and academic records to provide effective communication and high‑quality education. <br><br> Your data is stored securely and is <strong>never shared or sold</strong> to any third party, except when required for essential educational services or by law. <br><br> We may use student photos or videos strictly for educational or promotional purposes. By using our website or services, you agree to our privacy practices. <br><br> For any concerns or questions, feel free to contact us at:<br> <strong>safaltuition@gmail.com</strong> or our official phone number. </p> </div> 
+<!-- PRIVACY POLICY -->
+<section id="privacy" class="section">
+    <h2>Privacy Policy</h2>
+    <div class="about-box">
+        <p class="about-text">
+            At <strong>Safal Group Tuition</strong>, we value your privacy and are committed to protecting your personal information. 
+            We collect only the necessary details such as student information, contact numbers, and academic records to provide effective communication and high-quality education.
+            <br><br>
+            Your data is stored securely and is <strong>never shared or sold</strong> to any third party, except when required for essential educational services or by law.
+            <br><br>
+            We may use student photos or videos strictly for educational or promotional purposes. 
+            By using our website or services, you agree to our privacy practices.
+            <br><br>
+            For any concerns or questions, feel free to contact us at:<br>
+            <strong>safaltuition@gmail.com</strong> or our official phone number.
+        </p>
+    </div>
+</section>
 
-</section> 
-  © 2025 Safal Group Tuition | All Rights Reserved <footer>
+<footer>
+    © 2025 Safal Group Tuition | All Rights Reserved
+</footer>
 
 </body>
 </html>
