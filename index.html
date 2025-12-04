@@ -57,7 +57,18 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: 10px 20px;
+            padding: 12px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* NAME on hamburger bar */
+        .nav-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1747c7;
         }
 
         .nav {
@@ -104,10 +115,6 @@
             }
             .hamburger {
                 display: block;
-                text-align: right;
-            }
-            .mobile-menu {
-                display: none;
             }
         }
 
@@ -193,8 +200,10 @@
     <p>Bhavnagar's The Most Trusted & Top Rated Educational Institute</p>
 </header>
 
-<!-- NAVIGATION WITH HAMBURGER -->
+<!-- NAVIGATION WITH NAME + HAMBURGER -->
 <div class="nav-container">
+
+    <div class="nav-title">SAFAL GROUP TUITION</div>
 
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
@@ -206,14 +215,15 @@
         <a href="#privacy">Privacy Policy</a>
     </div>
 
-    <div id="mobileMenu" class="mobile-menu">
-        <a href="#about" onclick="toggleMenu()">About Us</a>
-        <a href="#features" onclick="toggleMenu()">Features</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-        <a href="#location" onclick="toggleMenu()">Location</a>
-        <a href="#privacy" onclick="toggleMenu()">Privacy Policy</a>
-    </div>
+</div>
 
+<!-- MOBILE MENU DROPDOWN -->
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#about" onclick="toggleMenu()">About Us</a>
+    <a href="#features" onclick="toggleMenu()">Features</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="#location" onclick="toggleMenu()">Location</a>
+    <a href="#privacy" onclick="toggleMenu()">Privacy Policy</a>
 </div>
 
 <!-- ABOUT SECTION -->
