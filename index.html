@@ -1,6 +1,3 @@
-<!-- Full Professional Multi-Section Animated Website for SAFAL GROUP TUITION -->
-<!-- Colors: Blue + White | Animated | Mobile Responsive | Modern UI -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,17 +50,20 @@
             to { opacity: 1; }
         }
 
-        /* ------------------- NAVIGATION (RESPONSIVE ADDED) ------------------- */
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 15px;
+        /* ------------------- NAVIGATION ------------------- */
+        .nav-container {
             background: white;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 100;
+            padding: 10px 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
         }
 
         .nav a {
@@ -72,21 +72,42 @@
             color: #1747c7;
         }
 
-        .nav a:hover {
-            color: #0d2a7a;
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #1747c7;
+            font-weight: bold;
         }
 
-        /* 🔥 Responsive Navigation Fix */
-        @media (max-width: 600px) {
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1747c7;
+            text-decoration: none;
+        }
+
+        /* 🔥 Responsive Navigation */
+        @media (max-width: 700px) {
             .nav {
-                flex-direction: column;
-                gap: 10px;
-                padding: 12px;
-                text-align: center;
+                display: none;
             }
-            .nav a {
+            .hamburger {
                 display: block;
-                font-size: 16px;
+                text-align: right;
+            }
+            .mobile-menu {
+                display: none;
             }
         }
 
@@ -154,10 +175,6 @@
             font-weight: 600;
         }
 
-        .contact-box a:hover {
-            background: #0f2e8c;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -165,7 +182,6 @@
             font-size: 14px;
             margin-top: 40px;
         }
-
     </style>
 </head>
 
@@ -177,12 +193,27 @@
     <p>Bhavnagar's The Most Trusted & Top Rated Educational Institute</p>
 </header>
 
-<div class="nav">
-    <a href="#about">About Us</a>
-    <a href="#features">Features</a>
-    <a href="#contact">Contact</a>
-    <a href="#location">Location</a>
-    <a href="#privacy">Privacy Policy</a>
+<!-- NAVIGATION WITH HAMBURGER -->
+<div class="nav-container">
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav">
+        <a href="#about">About Us</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+        <a href="#location">Location</a>
+        <a href="#privacy">Privacy Policy</a>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#about" onclick="toggleMenu()">About Us</a>
+        <a href="#features" onclick="toggleMenu()">Features</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a href="#location" onclick="toggleMenu()">Location</a>
+        <a href="#privacy" onclick="toggleMenu()">Privacy Policy</a>
+    </div>
+
 </div>
 
 <!-- ABOUT SECTION -->
@@ -190,10 +221,10 @@
     <h2>About Us</h2>
     <div class="about-box">
         <p class="about-text">
-            Founded in 2012, <strong>Safal Group Tuition</strong> is Bhavnagar's most trusted and result-oriented educational institute. 
-            For the past decade, we have helped thousands of students build strong foundations, score excellent marks, and excel in their academic journey. 
+            Founded in 2012, <strong>Safal Group Tuition</strong> is Bhavnagar's most trusted and result-oriented educational institute.
+            For the past decade, we have helped thousands of students build strong foundations, score excellent marks, and excel in their academic journey.
             <br><br>
-            Our teaching methods focus on clarity, personal attention, regular testing, and a stress-free environment where students can thrive. 
+            Our teaching methods focus on clarity, personal attention, regular testing, and a stress-free environment where students can thrive.
             Safal Group Tuition’s mission is simple — to deliver quality education that transforms students into confident and successful achievers.
         </p>
 
@@ -231,7 +262,7 @@
         155, Bharat Nagar Rd, Shikshak Society, Bhavnagar, Gujarat
     </p>
     <iframe style="width:100%; height:300px; border-radius:20px; border:0;"
-            src="https://www.google.com/maps?q=155,+Bharat+Nagar+Rd,+Bhavnagar&output=embed">
+        src="https://www.google.com/maps?q=155,+Bharat+Nagar+Rd,+Bhavnagar&output=embed">
     </iframe>
 </section>
 
@@ -240,12 +271,12 @@
     <h2>Privacy Policy</h2>
     <div class="about-box">
         <p class="about-text">
-            At <strong>Safal Group Tuition</strong>, we value your privacy and are committed to protecting your personal information. 
+            At <strong>Safal Group Tuition</strong>, we value your privacy and are committed to protecting your personal information.
             We collect only the necessary details such as student information, contact numbers, and academic records to provide effective communication and high-quality education.
             <br><br>
             Your data is stored securely and is <strong>never shared or sold</strong> to any third party, except when required for essential educational services or by law.
             <br><br>
-            We may use student photos or videos strictly for educational or promotional purposes. 
+            We may use student photos or videos strictly for educational or promotional purposes.
             By using our website or services, you agree to our privacy practices.
             <br><br>
             For any concerns or questions, feel free to contact us at:<br>
@@ -257,6 +288,13 @@
 <footer>
     © 2025 Safal Group Tuition | All Rights Reserved
 </footer>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>
