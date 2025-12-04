@@ -54,17 +54,24 @@
         .nav-container {
             background: white;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 100;
+            width: 100%;
+            z-index: 200;
             padding: 12px 20px;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
         }
 
-        /* NAME on hamburger bar */
+        .show-nav {
+            transform: translateY(0);
+        }
+
         .nav-title {
             font-size: 20px;
             font-weight: 700;
@@ -201,8 +208,7 @@
 </header>
 
 <!-- NAVIGATION WITH NAME + HAMBURGER -->
-<div class="nav-container">
-
+<div id="navBar" class="nav-container">
     <div class="nav-title">SAFAL GROUP TUITION</div>
 
     <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -214,10 +220,9 @@
         <a href="#location">Location</a>
         <a href="#privacy">Privacy Policy</a>
     </div>
-
 </div>
 
-<!-- MOBILE MENU DROPDOWN -->
+<!-- MOBILE DROPDOWN MENU -->
 <div id="mobileMenu" class="mobile-menu">
     <a href="#about" onclick="toggleMenu()">About Us</a>
     <a href="#features" onclick="toggleMenu()">Features</a>
@@ -300,10 +305,27 @@
 </footer>
 
 <script>
+/* TOGGLE MOBILE MENU */
 function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
+
+/* SHOW NAV ON SCROLL */
+let lastScroll = 0;
+
+window.addEventListener("scroll", function () {
+    const nav = document.getElementById("navBar");
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 150) {
+        nav.classList.add("show-nav");
+    } else {
+        nav.classList.remove("show-nav");
+    }
+
+    lastScroll = currentScroll;
+});
 </script>
 
 </body>
